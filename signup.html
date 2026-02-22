@@ -2,74 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Adult Agility</title>
-    <script src="project.js"></script>
-    <style>
-        body {
-            background: #0B0F14;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>Join Adult Agility</title>
+  
+  <style>
+    body {
+      background: #0B0F14;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
-        .form-box {
-            background: #11161D;
-            padding: 40px;
-            border-radius: 12px;
-            width: 320px;
-            box-shadow: 0 0 25px rgba(255, 92, 0, 0.4);
-        }
+    .form-box {
+      background: #11161D;
+      padding: 40px;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 0 25px rgba(255, 92, 0, 0.4);
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 6px;
-        }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+    }
 
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #FFB300, #FF5C00);
-            color: white;
-            cursor: pointer;
-        }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #FFB300, #FF5C00);
+      color: white;
+      cursor: pointer;
+    }
 
-        button:hover {
-            opacity: 0.9;
-        }
-    </style>
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .next-btn {
+      margin-top: 20px;
+      display: none; /* hidden by default */
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #FFB300, #FF5C00);
+      color: white;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="form-box">
-        <h2>Sign Up</h2>
+  <div class="form-box">
+    <h2>Sign Up</h2>
 
-        <form id="signupForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="number" id="age" placeholder="Your Age" required>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="saved-data" id="savedData"></div>
+   <form id="signupForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="number" id="age" placeholder="Your Age" required>
+  <button type="submit">Submit</button>
+</form>
+<div id="message"></div>
 
-    </div>
+<script>
+  const form = document.getElementById("signupForm");
+  const message = document.getElementById("message");
 
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
 
+    const name = document.getElementById("name").value.trim();
+    const age = parseInt(document.getElementById("age").value);
+
+    if (age >= 18) {
+      localStorage.setItem("adultAgilityUser",
+      JSON.stringify({name, age}));
+      message.innerHTML = `Hi ${name}, welcome to Adult Agility — let's get grinding 💪🔥`;
+
+      // redirect to next page
+      setTimeout(() => {
+        window.location.href = "nextpage.html";
+      }, 1000); // small delay so user sees message
+    } else if (age < 18) {
+      message.innerHTML = "Sorry, you are not of legal age to consume our content.";
+      message.style.color = "red";
+    } else {
+      message.innerHTML = "Please enter a valid age.";
+    }
+  });
+</script>
+  </div>
 </body>
 
 </html>
