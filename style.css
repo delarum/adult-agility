@@ -1,5 +1,9 @@
+.navbar {
+    padding: 15px 40px;;
+}
+
 .logo {
-    
+
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 800;
