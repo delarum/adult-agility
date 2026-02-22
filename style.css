@@ -1,0 +1,213 @@
+.logo {
+    
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 0.9;
+}
+
+/* ADULT (Steel Look) */
+.steel {
+  display: block;
+  color: #E5E5E5;
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.6),
+    0 0 8px rgba(255,255,255,0.1);
+}
+
+/* AGILITY (Fire Text) */
+.fire {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    #FFB300,
+    #FF5C00,
+    #E03C00,
+    #FF5C00
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: flameMove 4s linear infinite;
+
+  text-shadow:
+    0 0 10px rgba(255, 92, 0, 0.6),
+    0 0 25px rgba(255, 92, 0, 0.4);
+}
+
+/* Fire animation */
+@keyframes flameMove {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+
+:root {
+    --carbon: #0F0F0F;
+    --iron: #1C1C1C;
+    --lime: #B4F000;
+    --steel: #C5C5C5;
+    --hex: #FF5C00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--carbon);
+    color: var(--steel);
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: var(--carbon);
+}
+
+/* FIRE BLOB */
+.blob1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    left: -150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(255, 200, 0, 0.7) 0%,
+            rgba(255, 120, 0, 0.6) 40%,
+            rgba(225, 6, 0, 0.5) 70%,
+            transparent 90%);
+    animation: fireFlicker 5s ease-in-out infinite alternate;
+    filter: blur(40px);
+    will-change: transform, filter;
+    z-index: 0;
+}
+
+/* NEON LIME BLOB */
+.blob2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    bottom: -150px;
+    right: -150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180, 240, 0, 0.5) 0%, transparent 70%);
+    animation: moveLime 7s ease-in-out infinite alternate;
+    filter: blur(35px);
+    will-change: transform;
+    z-index: 0;
+}
+
+/* GRAIN TEXTURE */
+.grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--steel);
+}
+
+button {
+    padding: 14px 34px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--hex);
+    color: black;
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px var(--hex);
+}
+
+/* ANIMATIONS */
+@keyframes fireFlicker {
+    0% {
+        transform: translate(0, 0) scale(1);
+        filter: blur(38px);
+    }
+
+    25% {
+        transform: translate(20px, 10px) scale(1.05);
+        filter: blur(42px);
+    }
+
+    50% {
+        transform: translate(-15px, 15px) scale(0.98);
+        filter: blur(40px);
+    }
+
+    75% {
+        transform: translate(10px, -10px) scale(1.03);
+        filter: blur(41px);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        filter: blur(39px);
+    }
+}
+
+@keyframes moveLime {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-120px, -100px) scale(1.05);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
