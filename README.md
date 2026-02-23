@@ -1,5 +1,5 @@
 # ADULT AGILITY 
-This is a personalized webpage that displaysHTML, CSS, and Java Script implementation. It is a  
+This is a personalized webpage that displaysHTML, CSS, and Java Script implementation. It is an adult fitness page that offers an array connections to fitness studios, supliments, health support, fitness challenges, instructors and communities.
 
 ## DESCRIPTION
  - HTML: which is used to create a document structure with the form for user input and text sections that display messages in the webpage
@@ -10,7 +10,7 @@ This is a personalized webpage that displaysHTML, CSS, and Java Script implement
 
   ### The Repository
   ``` bash
-https://github.com/delarum/mulley-financial.git
+https://github.com/delarum/adult-agility.git
   ```
 
 ## Technologies used
