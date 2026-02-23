@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join Adult Agility</title>
-  
+
   <style>
     body {
       background: #0B0F14;
@@ -62,7 +62,8 @@
 
     .next-btn {
       margin-top: 20px;
-      display: none; /* hidden by default */
+      display: none;
+      /* hidden by default */
       text-decoration: none;
       padding: 12px 20px;
       border-radius: 50px;
@@ -78,40 +79,40 @@
   <div class="form-box">
     <h2>Sign Up</h2>
 
-   <form id="signupForm">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="number" id="age" placeholder="Your Age" required>
-  <button type="submit">Submit</button>
-</form>
-<div id="message"></div>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="number" id="age" placeholder="Your Age" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
 
-<script>
-  const form = document.getElementById("signupForm");
-  const message = document.getElementById("message");
+    <script>
+      const form = document.getElementById("signupForm");
+      const message = document.getElementById("message");
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const age = parseInt(document.getElementById("age").value);
+        const name = document.getElementById("name").value.trim();
+        const age = parseInt(document.getElementById("age").value);
 
-    if (age >= 18) {
-      localStorage.setItem("adultAgilityUser",
-      JSON.stringify({name, age}));
-      message.innerHTML = `Hi ${name}, welcome to Adult Agility — let's get grinding 💪🔥`;
+        if (age >= 18) {
+          localStorage.setItem("adultAgilityUser",
+            JSON.stringify({ name, age }));
+          message.innerHTML = `Hi ${name}, welcome to Adult Agility — let's get grinding 💪🔥`;
 
-      // redirect to next page
-      setTimeout(() => {
-        window.location.href = "nextpage.html";
-      }, 1000); // small delay so user sees message
-    } else if (age < 18) {
-      message.innerHTML = "Sorry, you are not of legal age to consume our content.";
-      message.style.color = "red";
-    } else {
-      message.innerHTML = "Please enter a valid age.";
-    }
-  });
-</script>
+          // redirect to next page
+          setTimeout(() => {
+            window.location.href = "nextpage.html";
+          }, 1000); // small delay so user sees message
+        } else if (age < 18) {
+          message.innerHTML = "Sorry, you are not of legal age to consume our content.";
+          message.style.color = "red";
+        } else {
+          message.innerHTML = "Please enter a valid age.";
+        }
+      });
+    </script>
   </div>
 </body>
 
