@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,73 +9,55 @@
     <link href="signup.html">
     <title>Document</title>
 </head>
+
 <body>
     <section class="content">
-<div class="blob1"></div>
-<div class="blob2"></div>
-<div class="grain"></div>
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="grain"></div>
 
-<div>
-    <h1 class="nextpage">According to your age, you are <i class="ageInMonths"></i> old</h1>
-    <script >
-        //const months = document.getElementsByClassName("months");
+        <div>
+            <h1 class="nextpage">According to your age, you are <i class="ageInMonths"></i> old</h1>
+            <script>
+                //const months = document.getElementsByClassName("months");
 
-function displayAgeInMonths(){
-    // get age from local storage 
-    let stroredUser = localStorage.getItem("adultAgilityUser")
+                function displayAgeInMonths() {
+                    // get age from local storage 
+                    let stroredUser = localStorage.getItem("adultAgilityUser")
 
-    if (!stroredUser){console.log("No user data found");
-        return;
-    }
+                    if (!stroredUser) {
+                        console.log("No user data found");
+                        return;
+                    }
 
-    let user = JSON.parse(stroredUser);
-    //convert strinh to number
-    let ageInYears = Number(user.age)
-    //convert years to months
-    let ageInMonths = ageInYears * 12;
+                    let user = JSON.parse(stroredUser);
+                    //convert string to number
+                    let ageInYears = Number(user.age)
+                    //convert years to months
+                    let ageInMonths = ageInYears * 12;
 
-    const ageElement = document.querySelector(".ageInMonths");
+                    const ageElement = document.querySelector(".ageInMonths");
 
-    if (ageElement){
-        ageElement.textContent = ageInMonths + "months";
-    }
-}
+                    if (ageElement) {
+                        ageElement.textContent = ageInMonths + "months";
+                    }
+                }
 
-displayAgeInMonths();
-//    return ageInYears * 12
-// }
-//  // Retrieve user info from localStorage
-//     const savedUser = localStorage.getItem("adultAgilityUser");
-
-//     if (savedUser) {
-//       const user = JSON.parse(savedUser);
-//       const name = user.name;
-//       const age = user.age;
-
-//       // Calculate months
-//       const months = ageInMonths(age);
-
-//       // Display in H1
-//       const greeting = document.getElementsByClassName("months");
-//       //greeting.textContent =` Hi ${name}, your age in months is ${months}`;
-//       body.append(i)
-//     } else {
-//       // No user info found → redirect back to signup
-//       alert("No user info found. Please sign up first.");
-//       window.location.href = "signup.html";
-//     }
-
-    </script>
-    <br>
-    <h1 class="next page">let's get you a personalized list of everything you might be intertested in but first i need to know more.</h1>
-    <br>
-    <div class="flex items-center justify-center ">
-   <a href="page3.html" class="btn bg-red-500 text white font-bold py-2 px-4 rounded"> Next →</a>
-    </div>
-    <br>
-    <h2 class="italic font-bold text-lg flex items-center justify-center tracking-wider">~TAKE CARE OF YOUR BODY, IT'S YOUR HOME ~</h2>
-</div>
+                displayAgeInMonths();
+             </script>
+            <br>
+            <h1 class="next page">let's get you a personalized list of everything you might be intertested in but first
+                i need to know more.</h1>
+            <br>
+            <div class="flex items-center justify-center ">
+                <a href="page3.html" class="btn bg-red-500 text white font-bold py-2 px-4 rounded"> Next →</a>
+            </div>
+            <br>
+            <h2 class="italic font-bold text-lg flex items-center justify-center tracking-wider">~TAKE CARE OF YOUR
+                BODY, IT'S YOUR HOME ~</h2>
+        </div>
     </section>
-   
+
 </body>
+
 </html>
