@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-       <style>
+    <style>
         /* global reset & base */
         * {
             margin: 0;
@@ -15,12 +17,16 @@
         }
 
         body {
-            background: #010101;;        /* soft neutral background */
+            background: #010101;
+            ;
+            /* soft neutral background */
             font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
             min-height: 100vh;
             display: flex;
-            align-items: center;         /* vertical centering */
-            justify-content: center;      /* horizontal centering */
+            align-items: center;
+            /* vertical centering */
+            justify-content: center;
+            /* horizontal centering */
             padding: 1.5rem;
             line-height: 1.4;
         }
@@ -31,9 +37,10 @@
             width: 100%;
             background: #1c1c1c;
             border-radius: 2.5rem 2.5rem 2rem 2.5rem;
-            box-shadow:0 0 20px #ff6a00;
+            box-shadow: 0 0 20px #ff6a00;
             padding: 2.8rem 2.5rem;
-            text-align: center;           /* everything inside is centered */
+            text-align: center;
+            /* everything inside is centered */
             border: 2px solid #ff6a00;
         }
 
@@ -45,7 +52,8 @@
             color: white;
             margin-bottom: 2.2rem;
             padding-bottom: 0.75rem;
-            display: inline-block;        /* border wraps text */
+            display: inline-block;
+            /* border wraps text */
             line-height: 1.2;
         }
 
@@ -62,7 +70,8 @@
         .energy-column {
             flex: 0 1 auto;
             min-width: 200px;
-            text-align: center;           /* ensure inner text is centered */
+            text-align: center;
+            /* ensure inner text is centered */
         }
 
         /* activity titles (high / low) */
@@ -76,7 +85,7 @@
             border-radius: 60px;
             margin-bottom: 1.2rem;
             letter-spacing: 0.3px;
-    
+
         }
 
         /* bullet list – centered, no decoration */
@@ -96,30 +105,31 @@
             border: 1px solid #e7ddd0;
             box-shadow: 0 2px 4px rgba(239, 159, 11, 0.02);
             transition: background 0.1s ease;
-            display: inline-block;          /* makes the background fit content */
+            display: inline-block;
+            /* makes the background fit content */
             min-width: 140px;
             text-align: center;
         }
 
         /* small variety: adjust width for longer typical activities – keeps centering */
-        .activity-list li:nth-child(1) { min-width: 160px; }
-        .activity-list li:nth-child(2) { min-width: 170px; }
-        .activity-list li:nth-child(3) { min-width: 150px; }
+        .activity-list li:nth-child(1) {
+            min-width: 160px;
+        }
+
+        .activity-list li:nth-child(2) {
+            min-width: 170px;
+        }
+
+        .activity-list li:nth-child(3) {
+            min-width: 150px;
+        }
 
         /* footer phrase – exactly as image */
         .footer-quote {
-            font-size: 1.75rem;
-            font-weight: 350;
-            color:white;
-            /* background: #fcf6ed;
-            padding: 1.2rem 1.8rem;
-            border-radius: 100px 100px 40px 40px;
-            display: inline-block;          /* centers under grid */
-            /* border: 2px solid #dbcbb8;
-            box-shadow: 0 6px 0 #cfb9a2;
-            margin-top: 1.2rem;
-            max-width: 85%;
-            line-height: 1.3; */ */
+            text-align: center;
+            color: #ff6a00;
+            font-style: italic;
+            margin-top: 50px;
         }
 
         /* optional subtle spacing */
@@ -130,46 +140,71 @@
 
         /* tiny screens: adjust font size */
         @media (max-width: 500px) {
-            .card { padding: 2rem 1.2rem; }
-            .main-headline { font-size: 2.2rem; }
-            .activity-title { font-size: 1.6rem; }
-            .activity-list li { font-size: 1.1rem; min-width: 130px; }
-            .footer-quote { font-size: 1.3rem; }
+            .card {
+                padding: 2rem 1.2rem;
+            }
+
+            .main-headline {
+                font-size: 2.2rem;
+            }
+
+            .activity-title {
+                font-size: 1.6rem;
+            }
+
+            .activity-list li {
+                font-size: 1.1rem;
+                min-width: 130px;
+            }
+
+            .footer-quote {
+                font-size: 1.3rem;
+            }
         }
     </style>
-</head>
-<body>
-    <div class="card">
-        <!-- main line: What's Your Energy Level? -->
-        <div class="main-headline">⚡ What's Your Energy Level? ⚡</div>
+    </head>
 
-        <!-- two activity columns (high / low) perfectly centered -->
-        <div class="energy-grid">
-            <!-- left column: high energy -->
-            <div class="energy-column">
-                <div class="activity-title">⬆️ High Energy</div>
-                <ul class="activity-list">
-                    <li>🏃‍♂️ running</li>
-                    <li>🤸‍♀️ dancing</li>
-                    <li>🧗‍♀️ climbing</li>
-                </ul>
+    <body>
+        <div class="card">
+            <!-- main line: What's Your Energy Level? -->
+            <div class="main-headline">⚡ What's Your Energy Level? ⚡</div>
+
+            <!-- two activity columns (high / low) perfectly centered -->
+            <div class="energy-grid">
+                <!-- left column: high energy -->
+                <div class="energy-column">
+                    <div class="activity-title"> High Energy</div>
+                    <ul class="activity-list">
+                        <li> hyrax</li>
+                        <li>gym centered</li>
+                        <li> outdoor activities</li>
+                    </ul>
+                </div>
+
+                <!-- right column: low energy -->
+                <div class="energy-column">
+                    <div class="activity-title"> Low Energy</div>
+                    <ul class="activity-list">
+                        <li>pilates</li>
+                        <li>yoga</li>
+                        <li>stretches</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- right column: low energy -->
-            <div class="energy-column">
-                <div class="activity-title">⬇️ Low Energy</div>
-                <ul class="activity-list">
-                    <li>📖 reading</li>
-                    <li>🧘 stretching</li>
-                    <li>😴 napping</li>
-                </ul>
-            </div>
-        </div>
+            <!-- gentle reminder – exactly as written, centered -->
+            <div class="footer-quote" id="quoteContainer"></div>
+            <script>
+                const quote = "~ TAKE CARE OF YOUR BODY, IT'S YOUR HOME ~";
+                const container = document.getElementById("quoteContainer");
 
-        <!-- gentle reminder – exactly as written, centered -->
-        <div class="footer-quote">
-            ~ TAKE CARE OF YOUR BODY,<br> IT'S YOUR HOME ~
+                for (let i = 0; i < 5; i++) {
+                    const p = document.createElement("p");
+                    p.textContent = quote;
+                    container.appendChild(p);
+                }
+            </script>
         </div>
-    </div>
-</body>
+    </body>
+
 </html>
