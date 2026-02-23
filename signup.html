@@ -63,7 +63,6 @@
     .next-btn {
       margin-top: 20px;
       display: none;
-      /* hidden by default */
       text-decoration: none;
       padding: 12px 20px;
       border-radius: 50px;
@@ -101,10 +100,10 @@
             JSON.stringify({ name, age }));
           message.innerHTML = `Hi ${name}, welcome to Adult Agility — let's get grinding 💪🔥`;
 
-          // redirect to next page
+          // take to next page
           setTimeout(() => {
             window.location.href = "nextpage.html";
-          }, 1000); // small delay so user sees message
+          }, 2000); // small delay so user sees message
         } else if (age < 18) {
           message.innerHTML = "Sorry, you are not of legal age to consume our content.";
           message.style.color = "red";
