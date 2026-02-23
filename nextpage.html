@@ -15,7 +15,7 @@
 <div class="grain"></div>
 
 <div>
-    <h1 class="nextpage">According to your age, you are <i class="ageInMonths"></i>old</h1>
+    <h1 class="nextpage">According to your age, you are <i class="ageInMonths"></i> old</h1>
     <script >
         //const months = document.getElementsByClassName("months");
 
@@ -33,7 +33,7 @@ function displayAgeInMonths(){
     //convert years to months
     let ageInMonths = ageInYears * 12;
 
-    const ageElement = document.querySelector("ageInMonths");
+    const ageElement = document.querySelector(".ageInMonths");
 
     if (ageElement){
         ageElement.textContent = ageInMonths + "months";
