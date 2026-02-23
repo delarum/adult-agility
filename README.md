@@ -1,5 +1,5 @@
 # ADULT AGILITY 
-This is a personalized webpage that displaysHTML, CSS, and Java Script implementation. It is an adult fitness page that offers an array connections to fitness studios, supliments, health support, fitness challenges, instructors and communities.
+This is a personalized webpage that displays HTML, CSS, and Java Script implementation. It is an adult fitness page that offers an array connections to fitness studios, suppliments, health support, fitness challenges, instructors and communities.
 
 ## DESCRIPTION
  - HTML: which is used to create a document structure with the form for user input and text sections that display messages in the webpage
