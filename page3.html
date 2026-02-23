@@ -9,7 +9,6 @@
 
 <body>
     <style>
-        /* global reset & base */
         * {
             margin: 0;
             padding: 0;
@@ -19,19 +18,17 @@
         body {
             background: #010101;
             ;
-            /* soft neutral background */
+            /*  neutral background */
             font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            /* vertical centering */
             justify-content: center;
-            /* horizontal centering */
             padding: 1.5rem;
             line-height: 1.4;
         }
 
-        /* main card – also centered, but body flex already centers everything */
+        /* main card centered */
         .card {
             max-width: 720px;
             width: 100%;
@@ -40,7 +37,6 @@
             box-shadow: 0 0 20px #ff6a00;
             padding: 2.8rem 2.5rem;
             text-align: center;
-            /* everything inside is centered */
             border: 2px solid #ff6a00;
         }
 
@@ -53,11 +49,9 @@
             margin-bottom: 2.2rem;
             padding-bottom: 0.75rem;
             display: inline-block;
-            /* border wraps text */
             line-height: 1.2;
         }
 
-        /* energy blocks container – still centered as inline-block parent */
         .energy-grid {
             display: flex;
             flex-wrap: wrap;
@@ -66,15 +60,12 @@
             margin: 2.5rem 0 2.8rem 0;
         }
 
-        /* each column */
         .energy-column {
             flex: 0 1 auto;
             min-width: 200px;
             text-align: center;
-            /* ensure inner text is centered */
         }
 
-        /* activity titles (high / low) */
         .activity-title {
             font-size: 1.9rem;
             font-weight: 500;
@@ -106,12 +97,10 @@
             box-shadow: 0 2px 4px rgba(239, 159, 11, 0.02);
             transition: background 0.1s ease;
             display: inline-block;
-            /* makes the background fit content */
             min-width: 140px;
             text-align: center;
         }
 
-        /* small variety: adjust width for longer typical activities – keeps centering */
         .activity-list li:nth-child(1) {
             min-width: 160px;
         }
@@ -124,7 +113,7 @@
             min-width: 150px;
         }
 
-        /* footer phrase – exactly as image */
+        /* footer phrase */
         .footer-quote {
             text-align: center;
             color: #ff6a00;
@@ -132,13 +121,13 @@
             margin-top: 50px;
         }
 
-        /* optional subtle spacing */
+        /* footer spacing */
         .footer-quote span {
             font-weight: 400;
             white-space: nowrap;
         }
 
-        /* tiny screens: adjust font size */
+
         @media (max-width: 500px) {
             .card {
                 padding: 2rem 1.2rem;
@@ -166,12 +155,10 @@
 
     <body>
         <div class="card">
-            <!-- main line: What's Your Energy Level? -->
+        
             <div class="main-headline">⚡ What's Your Energy Level? ⚡</div>
 
-            <!-- two activity columns (high / low) perfectly centered -->
             <div class="energy-grid">
-                <!-- left column: high energy -->
                 <div class="energy-column">
                     <div class="activity-title"> High Energy</div>
                     <ul class="activity-list">
@@ -181,7 +168,6 @@
                     </ul>
                 </div>
 
-                <!-- right column: low energy -->
                 <div class="energy-column">
                     <div class="activity-title"> Low Energy</div>
                     <ul class="activity-list">
@@ -192,7 +178,6 @@
                 </div>
             </div>
 
-            <!-- gentle reminder – exactly as written, centered -->
             <div class="footer-quote" id="quoteContainer"></div>
             <script>
                 const quote = "~ TAKE CARE OF YOUR BODY, IT'S YOUR HOME ~";
